@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KoreAI — Brand Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0b0b0b;
+    --bg2: #131313;
+    --bg3: #1a1a1a;
+    --neon: #c8f135;
+    --neon-dim: rgba(200,241,53,0.07);
+    --neon-border: rgba(200,241,53,0.18);
+    --white: #f0f0f0;
+    --muted: #404040;
+    --muted2: #737373;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7vw;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    position: sticky; top: 0;
+    background: rgba(11,11,11,0.96);
+    backdrop-filter: blur(20px);
+    z-index: 100;
+  }
+
+  .nav-logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .nav-logo .k { color: var(--neon); }
+  .nav-logo .rest { color: var(--white); }
+
+  .nav-tag {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--muted2);
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 96vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 80px 7vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -10%; right: -5%;
+    width: 55vw; height: 55vw;
+    background: radial-gradient(circle, rgba(200,241,53,0.06) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    position: absolute;
+    top: 48px; right: 7vw;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--neon);
+    letter-spacing: 0.08em;
+  }
+
+  .badge-dot {
+    width: 5px; height: 5px;
+    background: var(--neon);
+    border-radius: 50%;
+    animation: blink 2.5s ease infinite;
+  }
+
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.15} }
+
+  .hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(76px, 15vw, 196px);
+    font-weight: 800;
+    line-height: 0.87;
+    letter-spacing: -0.04em;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .hero h1 .k { color: var(--neon); }
+  .hero h1 .ore { color: var(--white); }
+  .hero h1 .ai {
+    color: var(--white);
+    font-weight: 200;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-meta {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 32px;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    color: var(--muted2);
+    max-width: 380px;
+    font-weight: 400;
+    line-height: 1.8;
+  }
+
+  .hero-nums { display: flex; gap: 44px; }
+
+  .hero-num-val {
+    font-family: 'Outfit', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--neon);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-num-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .divider { width: 100%; height: 1px; background: rgba(255,255,255,0.05); }
+
+  /* SECTIONS */
+  .section {
+    padding: 96px 7vw;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 56px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .section-num {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--neon);
+    flex-shrink: 0;
+  }
+
+  h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(28px, 4vw, 46px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  h2 em { font-style: normal; color: var(--neon); font-weight: 200; }
+
+  /* ─── LOGO SECTION ─── */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3px;
+  }
+
+  .logo-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 72px 40px;
+    gap: 28px;
+    min-height: 320px;
+    background: var(--bg2);
+    transition: background 0.3s;
+  }
+
+  .logo-cell:hover { background: var(--bg3); }
+  .logo-cell.main  { background: #0e0e0e; border-radius: 20px 0 0 20px; }
+  .logo-cell.top   { border-radius: 0 20px 0 0; }
+  .logo-cell.bot   { border-radius: 0 0 20px 0; }
+  .logo-cell.on-neon  { background: var(--neon); }
+  .logo-cell.on-white { background: #f0f0f0; }
+  .logo-cell.on-neon:hover  { background: #d2f53e; }
+  .logo-cell.on-white:hover { background: #e6e6e6; }
+
+  .logo-caption {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--muted2);
+    text-align: center;
+  }
+
+  .logo-cell.on-neon .logo-caption,
+  .logo-cell.on-white .logo-caption { color: rgba(0,0,0,0.35); }
+
+  /* Wordmark */
+  .wordmark {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+  }
+
+  .wordmark .k   { color: var(--neon); }
+  .wordmark .ore { color: var(--white); }
+  .wordmark .ai  { color: var(--white); font-weight: 300; letter-spacing: 0.1em; }
+
+  .wordmark.dark .k   { color: var(--neon); }
+  .wordmark.dark .ore { color: #0b0b0b; }
+  .wordmark.dark .ai  { color: #0b0b0b; font-weight: 300; }
+
+  .logo-lockup { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+
+  /* ANATOMY */
+  .anatomy {
+    margin-top: 3px;
+    background: var(--bg2);
+    border-radius: 0 0 20px 20px;
+    padding: 40px 48px;
+    display: flex;
+    gap: 64px;
+    flex-wrap: wrap;
+  }
+
+  .anatomy-block { flex: 1; min-width: 220px; }
+
+  .anatomy-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--neon);
+    margin-bottom: 12px;
+  }
+
+  .anatomy-text {
+    font-size: 14px;
+    color: var(--muted2);
+    line-height: 1.8;
+    font-weight: 400;
+  }
+
+  .anatomy-text strong { color: var(--white); font-weight: 500; }
+
+  .at-list { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: #bbb; line-height: 1.9; }
+
+  /* PALETTE */
+  .palette {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3px;
+  }
+
+  .sw { overflow: hidden; }
+  .sw:first-child { border-radius: 16px 0 0 16px; }
+  .sw:last-child  { border-radius: 0 16px 16px 0; }
+  .sw-color { height: 110px; }
+  .sw-info  { background: var(--bg2); padding: 16px 20px; }
+  .sw-name  { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 3px; }
+  .sw-hex   { font-family: 'Inter', monospace; font-size: 11px; color: var(--muted2); letter-spacing: 0.04em; }
+
+  /* TYPOGRAPHY */
+  .type-stack { display: flex; flex-direction: column; gap: 3px; }
+
+  .type-row {
+    background: var(--bg2);
+    padding: 32px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    border-radius: 4px;
+  }
+
+  .type-row:first-child { border-radius: 16px 16px 4px 4px; }
+  .type-row:last-child  { border-radius: 4px 4px 16px 16px; }
+
+  .type-info {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: right;
+    flex-shrink: 0;
+    line-height: 1.9;
+    font-weight: 500;
+  }
+
+  /* IDENTITY */
+  .id-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+  }
+
+  .id-cell {
+    background: var(--bg2);
+    padding: 44px;
+    transition: background 0.3s;
+  }
+
+  .id-cell:hover { background: var(--bg3); }
+  .id-cell:nth-child(1) { border-radius: 16px 0 0 0; }
+  .id-cell:nth-child(2) { border-radius: 0 16px 0 0; }
+  .id-cell:nth-child(3) { border-radius: 0 0 0 16px; }
+  .id-cell:nth-child(4) { border-radius: 0 0 16px 0; }
+
+  .id-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--neon);
+    margin-bottom: 16px;
+  }
+
+  .id-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(18px, 2vw, 23px);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+
+  .id-sub {
+    font-size: 14px;
+    color: var(--muted2);
+    font-weight: 400;
+    line-height: 1.8;
+  }
+
+  /* TAGLINES */
+  .tl-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+  }
+
+  .tl-card {
+    background: var(--bg2);
+    padding: 44px;
+    transition: background 0.3s;
+  }
+
+  .tl-card:nth-child(1) { border-radius: 16px 0 0 0; }
+  .tl-card:nth-child(2) { border-radius: 0 16px 0 0; }
+  .tl-card:nth-child(3) { border-radius: 0 0 0 16px; }
+  .tl-card:nth-child(4) { border-radius: 0 0 16px 0; }
+  .tl-card:hover { background: var(--bg3); }
+
+  .tl-card.hero-tl {
+    background: var(--neon-dim);
+    border: 1px solid var(--neon-border);
+  }
+
+  .tl-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(18px, 2.2vw, 26px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .tl-card.hero-tl .tl-text { color: var(--neon); }
+  .tl-note { font-size: 12px; font-weight: 400; color: var(--muted2); letter-spacing: 0.04em; }
+
+  /* ROADMAP */
+  .roadmap { display: flex; flex-direction: column; }
+
+  .rm-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .rm-item:last-child { border-bottom: none; }
+
+  .rm-left {
+    padding: 44px 36px 44px 0;
+    border-right: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .rm-phase {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--neon);
+    margin-bottom: 8px;
+  }
+
+  .rm-period {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--muted2);
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+
+  .rm-right { padding: 44px 0 44px 48px; }
+
+  .rm-right h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+
+  .rm-right p { font-size: 14px; color: var(--muted2); margin-bottom: 20px; }
+
+  .rm-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .rm-list li {
+    list-style: none;
+    font-size: 14px;
+    color: #aaa;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .rm-list li::before {
+    content: '→';
+    color: var(--neon);
+    flex-shrink: 0;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  /* PILLARS */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+  }
+
+  .pillar {
+    background: var(--bg2);
+    padding: 40px 34px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .pillar:first-child { border-radius: 16px 0 0 16px; }
+  .pillar:last-child  { border-radius: 0 16px 16px 0; }
+  .pillar:hover { background: var(--bg3); }
+
+  .pillar::after {
+    content: attr(data-n);
+    position: absolute;
+    bottom: -12px; right: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    color: rgba(200,241,53,0.03);
+    pointer-events: none;
+    line-height: 1;
+  }
+
+  .pillar-icon { font-size: 20px; margin-bottom: 18px; }
+
+  .pillar h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  .pillar p { font-size: 13px; color: var(--muted2); line-height: 1.65; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 52px 7vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .footer-logo .k   { color: var(--neon); }
+  .footer-logo .rest { color: var(--white); }
+
+  footer p { font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
+
+  @media (max-width: 768px) {
+    .logo-grid { grid-template-columns: 1fr; }
+    .logo-cell.main { border-radius: 16px 16px 0 0; }
+    .logo-cell.top  { border-radius: 0; }
+    .logo-cell.bot  { border-radius: 0 0 16px 16px; }
+    .palette { grid-template-columns: 1fr 1fr; }
+    .id-grid, .tl-grid { grid-template-columns: 1fr; }
+    .id-cell:nth-child(1) { border-radius: 16px 16px 0 0; }
+    .id-cell:nth-child(4) { border-radius: 0 0 16px 16px; }
+    .id-cell:nth-child(2), .id-cell:nth-child(3) { border-radius: 0; }
+    .tl-card:nth-child(1) { border-radius: 16px 16px 0 0; }
+    .tl-card:nth-child(4) { border-radius: 0 0 16px 16px; }
+    .tl-card:nth-child(2), .tl-card:nth-child(3) { border-radius: 0; }
+    .pillars { grid-template-columns: 1fr; }
+    .pillar:first-child { border-radius: 16px 16px 0 0; }
+    .pillar:last-child  { border-radius: 0 0 16px 16px; }
+    .rm-item { grid-template-columns: 1fr; }
+    .rm-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.04); padding: 32px 0 20px; }
+    .rm-right { padding: 24px 0 32px; }
+    .type-row { flex-direction: column; gap: 10px; }
+    .type-info { text-align: left; }
+    .anatomy { gap: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><span class="k">K</span><span class="rest">ORE AI</span></div>
+  <div class="nav-tag">Brand Guide · 2025</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge"><div class="badge-dot"></div>Identidade — Kaique</div>
+
+  <h1>
+    <span class="k">K</span><span class="ore">ore</span><br>
+    <span class="ai">AI</span>
+  </h1>
+
+  <div class="hero-meta">
+    <p class="hero-desc">Marca limpa e atemporal para uma empresa de desenvolvimento, UX e inteligência artificial que constrói o futuro digital do zero.</p>
+    <div class="hero-nums">
+      <div>
+        <div class="hero-num-val">01</div>
+        <div class="hero-num-label">Marca</div>
+      </div>
+      <div>
+        <div class="hero-num-val">04</div>
+        <div class="hero-num-label">Fases</div>
+      </div>
+      <div>
+        <div class="hero-num-val">∞</div>
+        <div class="hero-num-label">Potencial</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- LOGO -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2>Símbolo <em>&</em> Logo</h2>
+  </div>
+
+  <div class="logo-grid">
+
+    <!-- MAIN: símbolo + wordmark fundo escuro -->
+    <div class="logo-cell main">
+      <div class="logo-lockup">
+        <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- haste vertical -->
+          <line x1="27" y1="12" x2="27" y2="64" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- arco superior: sobe e abre para direita -->
+          <path d="M27 38 C34 32 44 22 56 14" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <!-- arco inferior: desce e abre para direita -->
+          <path d="M27 38 C36 46 46 52 58 62" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <!-- núcleo: ponto neon -->
+          <circle cx="27" cy="38" r="5" fill="#c8f135"/>
+          <!-- brilho suave ao redor do núcleo -->
+          <circle cx="27" cy="38" r="9" fill="rgba(200,241,53,0.12)"/>
+        </svg>
+        <div class="wordmark" style="font-size:22px;">
+          <span class="k">K</span><span class="ore">ORE</span><span style="width:6px;display:inline-block;"></span><span class="ai">AI</span>
+        </div>
+      </div>
+      <div class="logo-caption">Versão principal — fundo escuro</div>
+    </div>
+
+    <!-- ícone isolado -->
+    <div class="logo-cell top">
+      <svg width="52" height="52" viewBox="0 0 76 76" fill="none">
+        <line x1="27" y1="12" x2="27" y2="64" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M27 38 C34 32 44 22 56 14" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <path d="M27 38 C36 46 46 52 58 62" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <circle cx="27" cy="38" r="5" fill="#c8f135"/>
+        <circle cx="27" cy="38" r="9" fill="rgba(200,241,53,0.12)"/>
+      </svg>
+      <div class="logo-caption">Ícone — avatar / favicon</div>
+    </div>
+
+    <!-- versão fundo neon -->
+    <div class="logo-cell bot on-neon">
+      <svg width="52" height="52" viewBox="0 0 76 76" fill="none">
+        <line x1="27" y1="12" x2="27" y2="64" stroke="#0b0b0b" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M27 38 C34 32 44 22 56 14" stroke="#0b0b0b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <path d="M27 38 C36 46 46 52 58 62" stroke="#0b0b0b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <circle cx="27" cy="38" r="5" fill="#0b0b0b"/>
+      </svg>
+      <div class="logo-caption">Versão neon</div>
+    </div>
+
+  </div>
+
+  <div class="anatomy">
+    <div class="anatomy-block">
+      <div class="anatomy-label">Conceito do símbolo</div>
+      <p class="anatomy-text">Dois arcos curvos emergindo de uma haste — como vetores, sinais ou trajetórias de crescimento. O <strong>ponto neon</strong> é o núcleo, o "core". Lembra um K sem ser um K literal. O <strong>AI</strong> em peso leve contrasta com o <strong>K</strong> em destaque verde, criando hierarquia visual imediata.</p>
+    </div>
+    <div class="anatomy-block">
+      <div class="anatomy-label">Domínio & @</div>
+      <div class="at-list">
+        <span>koreai.com.br</span>
+        <span>@koreai</span>
+        <span>@koreai.studio</span>
+      </div>
+    </div>
+    <div class="anatomy-block">
+      <div class="anatomy-label">Regra do K</div>
+      <p class="anatomy-text">O <strong>K sempre em verde</strong> — em qualquer fundo, qualquer versão. É o ponto de entrada visual da marca e a assinatura do Kaique.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- CORES -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2>Paleta de <em>Cores</em></h2>
+  </div>
+  <div class="palette">
+    <div class="sw">
+      <div class="sw-color" style="background:#c8f135;"></div>
+      <div class="sw-info"><div class="sw-name">Kore Green</div><div class="sw-hex">#C8F135 · Primária / K</div></div>
+    </div>
+    <div class="sw">
+      <div class="sw-color" style="background:#0b0b0b; border:1px solid rgba(255,255,255,0.04);"></div>
+      <div class="sw-info"><div class="sw-name">Deep Black</div><div class="sw-hex">#0B0B0B · Fundo</div></div>
+    </div>
+    <div class="sw">
+      <div class="sw-color" style="background:#f0f0f0;"></div>
+      <div class="sw-info"><div class="sw-name">Off White</div><div class="sw-hex">#F0F0F0 · Texto</div></div>
+    </div>
+    <div class="sw">
+      <div class="sw-color" style="background:#404040;"></div>
+      <div class="sw-info"><div class="sw-name">Dim</div><div class="sw-hex">#404040 · Muted</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- TIPOGRAFIA -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2>Sistema de <em>Tipos</em></h2>
+  </div>
+  <div class="type-stack">
+    <div class="type-row">
+      <div style="font-family:'Outfit',sans-serif;font-size:clamp(52px,10vw,110px);font-weight:800;letter-spacing:-0.04em;line-height:1;"><span style="color:var(--neon);">K</span>ore AI</div>
+      <div class="type-info">Outfit 800<br>Display</div>
+    </div>
+    <div class="type-row">
+      <div style="font-family:'Outfit',sans-serif;font-size:clamp(22px,3.5vw,40px);font-weight:600;letter-spacing:-0.03em;line-height:1;color:var(--neon);">Inteligência que constrói.</div>
+      <div class="type-info">Outfit 600<br>Headlines</div>
+    </div>
+    <div class="type-row">
+      <div style="font-family:'Inter',sans-serif;font-size:clamp(14px,1.6vw,17px);font-weight:400;color:var(--muted2);">Transformamos ideias em produtos digitais com IA, UX e código.</div>
+      <div class="type-info">Inter 400<br>Body text</div>
+    </div>
+    <div class="type-row">
+      <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--neon);">AI · UX · Design · Dev</div>
+      <div class="type-info">Inter 600<br>Labels</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- IDENTIDADE -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2>Identidade <em>da Marca</em></h2>
+  </div>
+  <div class="id-grid">
+    <div class="id-cell">
+      <div class="id-label">O que é KoreAI</div>
+      <div class="id-value">O núcleo inteligente do seu produto digital.</div>
+      <div class="id-sub">Kore vem de "core" — núcleo. A KoreAI usa inteligência artificial como ferramenta central para criar produtos mais rápidos, smarter e escaláveis. Não é só dev, é o futuro do produto digital.</div>
+    </div>
+    <div class="id-cell">
+      <div class="id-label">Para quem</div>
+      <div class="id-value">Founders e empresas que querem produtos do futuro agora.</div>
+      <div class="id-sub">Você entrega o que grandes agências cobram caro: UX estratégico, desenvolvimento sólido e IA integrada — tudo sob uma marca só, com agilidade de startup.</div>
+    </div>
+    <div class="id-cell">
+      <div class="id-label">Tom de voz</div>
+      <div class="id-value">Direto. Confiante. Focado em resultado.</div>
+      <div class="id-sub">Fale sem jargão, sem enrolação. Mostre o que você faz, prove com resultado. A IA não é buzzword aqui — é ferramenta real no processo.</div>
+    </div>
+    <div class="id-cell">
+      <div class="id-label">Diferencial</div>
+      <div class="id-value">IA + UX + Código. Tudo junto.</div>
+      <div class="id-sub">A maioria escolhe entre design bonito ou tecnologia sólida. A KoreAI entrega os dois, acelerados por inteligência artificial — do briefing ao produto em produção.</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- TAGLINES -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2>Frases <em>da Marca</em></h2>
+  </div>
+  <div class="tl-grid">
+    <div class="tl-card hero-tl">
+      <div class="tl-text">Inteligência que constrói.</div>
+      <div class="tl-note">Principal — bio, apresentações, portfólio</div>
+    </div>
+    <div class="tl-card">
+      <div class="tl-text">Do briefing ao produto com IA.</div>
+      <div class="tl-note">Institucional — site e LinkedIn</div>
+    </div>
+    <div class="tl-card">
+      <div class="tl-text">UX primeiro. IA no meio. Código no fim.</div>
+      <div class="tl-note">Posts de autoridade nas redes</div>
+    </div>
+    <div class="tl-card">
+      <div class="tl-text">Sua ideia virou produto. Com IA.</div>
+      <div class="tl-note">Conteúdo de prospecção e anúncio</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ROADMAP -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2>Roadmap <em>Digital</em></h2>
+  </div>
+  <div class="roadmap">
+    <div class="rm-item">
+      <div class="rm-left">
+        <div class="rm-phase">Fase 01</div>
+        <div class="rm-period">Semanas 1–2</div>
+      </div>
+      <div class="rm-right">
+        <h3>Fundação da marca</h3>
+        <p>Antes de postar, construa a base. Sem isso o esforço não converte.</p>
+        <ul class="rm-list">
+          <li>@ igual em todas as redes: @koreai</li>
+          <li>Foto profissional com fundo escuro — consistente com a identidade</li>
+          <li>Bio: o que faz + para quem + como contratar</li>
+          <li>Link na bio: Linktree ou landing page com portfólio</li>
+          <li>Foco em 2 redes: Instagram + LinkedIn</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rm-item">
+      <div class="rm-left">
+        <div class="rm-phase">Fase 02</div>
+        <div class="rm-period">Semanas 3–6</div>
+      </div>
+      <div class="rm-right">
+        <h3>Primeiros conteúdos</h3>
+        <p>Consistência vale mais que viralizar. 3x por semana, sempre.</p>
+        <ul class="rm-list">
+          <li>Post de apresentação: quem é a KoreAI e o que você faz</li>
+          <li>Bastidores: Figma, prompt de IA, código — mostra processo real</li>
+          <li>Educação: "Como uso IA para criar produtos 3x mais rápido"</li>
+          <li>Resultado: antes & depois de um projeto real ou conceitual</li>
+          <li>Reels 30–60s — algoritmo favorece muito</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rm-item">
+      <div class="rm-left">
+        <div class="rm-phase">Fase 03</div>
+        <div class="rm-period">Meses 2–3</div>
+      </div>
+      <div class="rm-right">
+        <h3>Construção de autoridade</h3>
+        <p>As pessoas começam a te reconhecer como referência em AI + Dev.</p>
+        <ul class="rm-list">
+          <li>Série: "5 formas de usar IA no desenvolvimento de produtos"</li>
+          <li>Case completo: do briefing à entrega com IA documentado</li>
+          <li>LinkedIn: artigos sobre IA + UX atraem empresas e parceiros</li>
+          <li>Interaja com outros devs e criadores de conteúdo tech</li>
+          <li>Lives, podcasts de nicho, comunidades de IA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rm-item">
+      <div class="rm-left">
+        <div class="rm-phase">Fase 04</div>
+        <div class="rm-period">Mês 3+</div>
+      </div>
+      <div class="rm-right">
+        <h3>Conversão em clientes</h3>
+        <p>Seguidores viram clientes. Aqui começa o retorno real.</p>
+        <ul class="rm-list">
+          <li>CTA claro em todo post: "Quer um produto assim? Me chama"</li>
+          <li>Portfólio online com projetos organizados e cases de IA</li>
+          <li>Depoimentos de clientes: peça sempre, publique sempre</li>
+          <li>Pacotes definidos: facilita a decisão de compra</li>
+          <li>Stories diários para humanizar a marca</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PILLARS -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <h2>Pilares de <em>Conteúdo</em></h2>
+  </div>
+  <div class="pillars">
+    <div class="pillar" data-n="01"><div class="pillar-icon">🧠</div><h4>Educação</h4><p>Ensine sobre IA, UX ou produto. Gera salvamentos e posiciona como autoridade.</p></div>
+    <div class="pillar" data-n="02"><div class="pillar-icon">⚡</div><h4>Processo com IA</h4><p>Mostre como usa IA no dia a dia: prompts, ferramentas, fluxo de trabalho.</p></div>
+    <div class="pillar" data-n="03"><div class="pillar-icon">🏆</div><h4>Resultado</h4><p>Antes & depois, projetos entregues. Gera desejo de contratar.</p></div>
+    <div class="pillar" data-n="04"><div class="pillar-icon">👤</div><h4>Pessoal</h4><p>Sua história e aprendizados. Humaniza a marca e gera conexão real.</p></div>
+    <div class="pillar" data-n="05"><div class="pillar-icon">💬</div><h4>Opinião</h4><p>Posição sobre IA, tech e mercado. Gera debate e autoridade.</p></div>
+    <div class="pillar" data-n="06"><div class="pillar-icon">🎯</div><h4>Oferta</h4><p>Post direto de serviço com CTA. Use com moderação: 1 a cada 5.</p></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo"><span class="k">K</span><span class="rest">ORE AI</span></div>
+  <p>Brand Guide · Kaique · 2025</p>
+</footer>
+
+</body>
+</html>
