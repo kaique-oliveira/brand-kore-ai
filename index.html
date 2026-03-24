@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KoreAI — Brand Guide</title>
 <link rel="icon" href="logo.png" type="image/png">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -46,14 +46,15 @@
   }
 
   .nav-logo {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
-    font-weight: 800;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: baseline;
   }
-  .nav-logo .k { color: var(--neon); }
-  .nav-logo .rest { color: var(--white); }
+  .nav-logo .k   { color: var(--white); font-weight: 800; text-transform: uppercase; }
+  .nav-logo .ore { color: var(--white); font-weight: 600; text-transform: lowercase; }
+  .nav-logo .ai  { color: var(--neon);  font-weight: 400; text-transform: uppercase; }
 
   .nav-tag {
     font-size: 11px;
@@ -104,7 +105,7 @@
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.15} }
 
   .hero h1 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: clamp(76px, 15vw, 196px);
     font-weight: 800;
     line-height: 0.87;
@@ -112,13 +113,9 @@
     animation: fadeUp 0.8s ease both;
   }
 
-  .hero h1 .k { color: var(--neon); }
-  .hero h1 .ore { color: var(--white); }
-  .hero h1 .ai {
-    color: var(--white);
-    font-weight: 200;
-    letter-spacing: -0.02em;
-  }
+  .hero h1 .k   { color: var(--white); font-weight: 800; }
+  .hero h1 .ore { color: var(--white); font-weight: 600; }
+  .hero h1 .ai  { color: var(--neon);  font-weight: 400; letter-spacing: -0.02em; }
 
   .hero-meta {
     margin-top: 52px;
@@ -141,7 +138,7 @@
   .hero-nums { display: flex; gap: 44px; }
 
   .hero-num-val {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 40px;
     font-weight: 700;
     color: var(--neon);
@@ -191,7 +188,7 @@
   }
 
   h2 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: clamp(28px, 4vw, 46px);
     font-weight: 700;
     line-height: 1.05;
@@ -241,22 +238,20 @@
 
   /* Wordmark */
   .wordmark {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 800;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.02em;
     display: flex;
     align-items: baseline;
     gap: 0;
   }
 
-  .wordmark .k   { color: var(--neon); }
-  .wordmark .ore { color: var(--white); }
-  .wordmark .ai  { color: var(--white); font-weight: 300; letter-spacing: 0.1em; }
+  .wordmark .k   { color: var(--white); font-weight: 800; text-transform: uppercase; }
+  .wordmark .ore { color: var(--white); font-weight: 600; text-transform: lowercase; }
+  .wordmark .ai  { color: var(--neon);  font-weight: 400; text-transform: uppercase; letter-spacing: 0.04em; }
 
-  .wordmark.dark .k   { color: var(--neon); }
-  .wordmark.dark .ore { color: #0b0b0b; }
-  .wordmark.dark .ai  { color: #0b0b0b; font-weight: 300; }
+  .wordmark.dark .k   { color: #0b0b0b; font-weight: 800; }
+  .wordmark.dark .ore { color: #0b0b0b; font-weight: 600; }
+  .wordmark.dark .ai  { color: #0b0b0b; font-weight: 400; }
 
   .logo-lockup { display: flex; flex-direction: column; align-items: center; gap: 18px; }
 
@@ -364,7 +359,7 @@
   }
 
   .id-value {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: clamp(18px, 2vw, 23px);
     font-weight: 600;
     line-height: 1.25;
@@ -404,7 +399,7 @@
   }
 
   .tl-text {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: clamp(18px, 2.2vw, 26px);
     font-weight: 600;
     letter-spacing: -0.02em;
@@ -441,7 +436,7 @@
   }
 
   .rm-period {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 600;
     color: var(--muted2);
@@ -452,7 +447,7 @@
   .rm-right { padding: 44px 0 44px 48px; }
 
   .rm-right h3 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -503,7 +498,7 @@
     content: attr(data-n);
     position: absolute;
     bottom: -12px; right: 12px;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 72px;
     font-weight: 800;
     color: rgba(200,241,53,0.03);
@@ -514,7 +509,7 @@
   .pillar-icon { font-size: 20px; margin-bottom: 18px; }
 
   .pillar h4 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: -0.01em;
@@ -535,15 +530,16 @@
   }
 
   .footer-logo {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: baseline;
   }
 
-  .footer-logo .k   { color: var(--neon); }
-  .footer-logo .rest { color: var(--white); }
+  .footer-logo .k   { color: var(--white); font-weight: 800; text-transform: uppercase; }
+  .footer-logo .ore { color: var(--white); font-weight: 600; text-transform: lowercase; }
+  .footer-logo .ai  { color: var(--neon);  font-weight: 400; text-transform: uppercase; }
 
   footer p { font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
 
@@ -576,7 +572,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo"><span class="k">K</span><span class="rest">ORE AI</span></div>
+  <div class="nav-logo"><span class="k">K</span><span class="ore">ore</span><span class="ai">AI</span></div>
   <div class="nav-tag">Brand Guide · 2025</div>
 </nav>
 
@@ -623,19 +619,27 @@
     <div class="logo-cell main">
       <div class="logo-lockup">
         <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- haste vertical -->
-          <line x1="27" y1="12" x2="27" y2="64" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round"/>
-          <!-- arco superior: sobe e abre para direita -->
-          <path d="M27 38 C34 32 44 22 56 14" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-          <!-- arco inferior: desce e abre para direita -->
-          <path d="M27 38 C36 46 46 52 58 62" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-          <!-- núcleo: ponto neon -->
-          <circle cx="27" cy="38" r="5" fill="#c8f135"/>
-          <!-- brilho suave ao redor do núcleo -->
-          <circle cx="27" cy="38" r="9" fill="rgba(200,241,53,0.12)"/>
+          <!-- K stem -->
+          <rect x="12" y="11" width="12" height="54" fill="#f0f0f0"/>
+          <!-- K upper arm (solid diagonal) -->
+          <polygon points="24,37 24,27 63,11 63,20" fill="#f0f0f0"/>
+          <!-- K lower arm (solid diagonal) -->
+          <polygon points="24,39 24,49 63,65 63,56" fill="#f0f0f0"/>
+          <!-- Circuit parallel lines on upper arm -->
+          <line x1="34" y1="30" x2="49" y2="22" stroke="#c8f135" stroke-width="1.5" opacity="0.55"/>
+          <line x1="39" y1="27" x2="55" y2="18" stroke="#c8f135" stroke-width="1.5" opacity="0.35"/>
+          <!-- Circuit node dots (top-right) -->
+          <circle cx="57" cy="14" r="3.2" fill="#c8f135"/>
+          <circle cx="63" cy="11" r="2" fill="#c8f135" opacity="0.5"/>
+          <circle cx="51" cy="17" r="2" fill="#c8f135" opacity="0.7"/>
+          <!-- Circuit node dot (bottom-right) -->
+          <circle cx="57" cy="62" r="3.2" fill="#c8f135" opacity="0.7"/>
+          <!-- Kink point accent -->
+          <circle cx="24" cy="38" r="4" fill="#c8f135"/>
+          <circle cx="24" cy="38" r="7" fill="rgba(200,241,53,0.12)"/>
         </svg>
         <div class="wordmark" style="font-size:22px;">
-          <span class="k">K</span><span class="ore">ORE</span><span style="width:6px;display:inline-block;"></span><span class="ai">AI</span>
+          <span class="k">K</span><span class="ore">ore</span><span class="ai">AI</span>
         </div>
       </div>
       <div class="logo-caption">Versão principal — fundo escuro</div>
@@ -644,11 +648,17 @@
     <!-- ícone isolado -->
     <div class="logo-cell top">
       <svg width="52" height="52" viewBox="0 0 76 76" fill="none">
-        <line x1="27" y1="12" x2="27" y2="64" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round"/>
-        <path d="M27 38 C34 32 44 22 56 14" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-        <path d="M27 38 C36 46 46 52 58 62" stroke="#f0f0f0" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-        <circle cx="27" cy="38" r="5" fill="#c8f135"/>
-        <circle cx="27" cy="38" r="9" fill="rgba(200,241,53,0.12)"/>
+        <rect x="12" y="11" width="12" height="54" fill="#f0f0f0"/>
+        <polygon points="24,37 24,27 63,11 63,20" fill="#f0f0f0"/>
+        <polygon points="24,39 24,49 63,65 63,56" fill="#f0f0f0"/>
+        <line x1="34" y1="30" x2="49" y2="22" stroke="#c8f135" stroke-width="1.5" opacity="0.55"/>
+        <line x1="39" y1="27" x2="55" y2="18" stroke="#c8f135" stroke-width="1.5" opacity="0.35"/>
+        <circle cx="57" cy="14" r="3.2" fill="#c8f135"/>
+        <circle cx="63" cy="11" r="2" fill="#c8f135" opacity="0.5"/>
+        <circle cx="51" cy="17" r="2" fill="#c8f135" opacity="0.7"/>
+        <circle cx="57" cy="62" r="3.2" fill="#c8f135" opacity="0.7"/>
+        <circle cx="24" cy="38" r="4" fill="#c8f135"/>
+        <circle cx="24" cy="38" r="7" fill="rgba(200,241,53,0.12)"/>
       </svg>
       <div class="logo-caption">Ícone — avatar / favicon</div>
     </div>
@@ -656,10 +666,15 @@
     <!-- versão fundo neon -->
     <div class="logo-cell bot on-neon">
       <svg width="52" height="52" viewBox="0 0 76 76" fill="none">
-        <line x1="27" y1="12" x2="27" y2="64" stroke="#0b0b0b" stroke-width="3.5" stroke-linecap="round"/>
-        <path d="M27 38 C34 32 44 22 56 14" stroke="#0b0b0b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-        <path d="M27 38 C36 46 46 52 58 62" stroke="#0b0b0b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-        <circle cx="27" cy="38" r="5" fill="#0b0b0b"/>
+        <rect x="12" y="11" width="12" height="54" fill="#0b0b0b"/>
+        <polygon points="24,37 24,27 63,11 63,20" fill="#0b0b0b"/>
+        <polygon points="24,39 24,49 63,65 63,56" fill="#0b0b0b"/>
+        <line x1="34" y1="30" x2="49" y2="22" stroke="#0b0b0b" stroke-width="1.5" opacity="0.4"/>
+        <line x1="39" y1="27" x2="55" y2="18" stroke="#0b0b0b" stroke-width="1.5" opacity="0.25"/>
+        <circle cx="57" cy="14" r="3.2" fill="rgba(0,0,0,0.35)"/>
+        <circle cx="51" cy="17" r="2" fill="rgba(0,0,0,0.25)"/>
+        <circle cx="57" cy="62" r="3.2" fill="rgba(0,0,0,0.25)"/>
+        <circle cx="24" cy="38" r="4" fill="#0b0b0b"/>
       </svg>
       <div class="logo-caption">Versão neon</div>
     </div>
@@ -724,12 +739,12 @@
   </div>
   <div class="type-stack">
     <div class="type-row">
-      <div style="font-family:'Outfit',sans-serif;font-size:clamp(52px,10vw,110px);font-weight:800;letter-spacing:-0.04em;line-height:1;"><span style="color:var(--neon);">K</span>ore AI</div>
-      <div class="type-info">Outfit 800<br>Display</div>
+      <div style="font-family:'Inter',sans-serif;font-size:clamp(52px,10vw,110px);letter-spacing:-0.04em;line-height:1;"><span style="font-weight:800;color:var(--white);">K</span><span style="font-weight:600;color:var(--white);">ore</span><span style="font-weight:400;color:var(--neon);">AI</span></div>
+      <div class="type-info">Inter 800/600/400<br>Display</div>
     </div>
     <div class="type-row">
-      <div style="font-family:'Outfit',sans-serif;font-size:clamp(22px,3.5vw,40px);font-weight:600;letter-spacing:-0.03em;line-height:1;color:var(--neon);">Inteligência que constrói.</div>
-      <div class="type-info">Outfit 600<br>Headlines</div>
+      <div style="font-family:'Inter',sans-serif;font-size:clamp(22px,3.5vw,40px);font-weight:600;letter-spacing:-0.03em;line-height:1;color:var(--neon);">Inteligência que constrói.</div>
+      <div class="type-info">Inter 600<br>Headlines</div>
     </div>
     <div class="type-row">
       <div style="font-family:'Inter',sans-serif;font-size:clamp(14px,1.6vw,17px);font-weight:400;color:var(--muted2);">Transformamos ideias em produtos digitais com IA, UX e código.</div>
@@ -901,7 +916,7 @@
 </div>
 
 <footer>
-  <div class="footer-logo"><span class="k">K</span><span class="rest">ORE AI</span></div>
+  <div class="footer-logo"><span class="k">K</span><span class="ore">ore</span><span class="ai">AI</span></div>
   <p>Brand Guide · Kaique · 2026</p>
 </footer>
 
